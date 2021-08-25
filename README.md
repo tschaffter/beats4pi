@@ -1,5 +1,10 @@
 # Build elastic/beats for Raspberry Pi
 
+[![GitHub Release](https://img.shields.io/github/release/tschaffter/beats4pi.svg?include_prereleases&color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/tschaffter/beats4pi/releases)
+[![GitHub CI](https://img.shields.io/github/workflow/status/tschaffter/beats4pi/CI.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/tschaffter/beats4pi/actions)
+[![GitHub License](https://img.shields.io/github/license/tschaffter/beats4pi.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/tschaffter/beats4pi/blob/main/LICENSE)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tschaffter/beats4pi.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/repository/docker/tschaffter/beats4pi)
+
 ## Introduction
 
 This repository provides a Docker image to cross compile [elastic/beats]
