@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1.17.0
 
 ENV GOPATH=/go
 ENV GOARCH=arm
@@ -9,7 +9,6 @@ ENV BEATS=filebeat,metricbeat
 ENV BEATS_VERSION=7.14.0
 
 COPY ./build.sh /build.sh
-RUN [ "mkdir", "-p", "/go" ]
-RUN [ "mkdir", "/build" ]
+RUN mkdir -p /go && mkdir /build
 
-CMD "/build.sh"
+CMD ["/build.sh"]
