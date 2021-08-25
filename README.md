@@ -39,7 +39,13 @@ beats components and output the build result in the current folder:
         -e BEATS_VERSION=7.14.0 \
         tschaffter/beats4pi:latest
 
+
+## Acknowledgments
+
+This project has been forked from [andig/beats4pi].
+
 <!-- Links -->
 
 [elastic/beats]: https://github.com/elastic/beats
 [Docker Engine]: https://docs.docker.com/engine/install/
+[andig/beats4pi]: https://github.com/andig/beats4pi
