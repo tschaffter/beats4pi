@@ -21,7 +21,7 @@ do
     # build
     cd $GOPATH/src/github.com/elastic/beats/$BEAT
     go build
-    cp $BEAT /build
+    # cp $BEAT /build
 
     # package
     DOWNLOAD=$BEAT-$BEATS_VERSION-linux-x86.tar.gz
@@ -31,6 +31,8 @@ do
     tar xf $DOWNLOAD
 
     cp $BEAT $BEAT-$BEATS_VERSION-linux-x86
+    cp "/${BEAT}.sh" $BEAT-$BEATS_VERSION-linux-x86
+
     tar zcf $BEAT-$BEATS_VERSION-linux-arm$GOARM.tar.gz $BEAT-$BEATS_VERSION-linux-x86
     cp $BEAT-$BEATS_VERSION-linux-arm$GOARM.tar.gz /build
 done

@@ -10,11 +10,9 @@
 This repository provides a Docker image to cross compile [elastic/beats]
 components for Raspberry Pi (ARMv7 architecture).
 
-
 ## Requirements
 
 - [Docker Engine] >=19.03.0
-
 
 ## Usage
 
@@ -26,7 +24,7 @@ to build:
 - `GOARCH=arm` - the target architecture, arm for RaspberryPi
 - `GOARM=7` - ARM architecture version - 7 for RasperryPi 3
 - `BEATS=filebeat,metricbeat` - comma-separated list of beats to compile
-- `BEATS_VERSION=7.14.0` - version to compile
+- `BEATS_VERSION=7.15.0` - version to compile
 
 ### Building the image
 
@@ -41,9 +39,15 @@ beats components and output the build result in the current folder:
     docker run --rm \
         -v $(pwd)/beats:/go/src/github.com/elastic/beats \
         -v $(pwd):/build \
-        -e BEATS_VERSION=7.14.0 \
+        -e BEATS_VERSION=7.15.0 \
         tschaffter/beats4pi:latest
 
+    docker run --rm \
+        -v $(pwd)/beats:/go/src/github.com/elastic/beats \
+        -v $(pwd):/build \
+        -e GOARCH=amd64 \
+        -e BEATS_VERSION=7.15.0 \
+        tschaffter/beats4pi:latest
 
 ## Acknowledgments
 
